@@ -1,7 +1,7 @@
 FROM python:3.7.13
 
 ARG PROJ_VERSION=7.1.1
-ARG GDAL_VERSION=3.2.3
+ARG GDAL_VERSION=3.4.1
 ARG OSGEO_VERSION=3.10.2
 
 RUN apt-get update \
@@ -14,7 +14,7 @@ RUN wget https://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz \
     && make \
     && make install
 
-RUN wget https://github.com/OSGeo/gdal/releases/download/v3.2.3/gdal-${GDAL_VERSION}.tar.gz
+RUN wget https://github.com/OSGeo/gdal/releases/download/v${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz
 RUN tar -xf gdal-${GDAL_VERSION}.tar.gz \
     && cd gdal-${GDAL_VERSION} \
     && ./configure --with-python \

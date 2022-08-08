@@ -2,7 +2,7 @@
 This project helps us to build an image with the next packages and versions.
 
 - Python 3.7.13
-- [GDAL](https://gdal.org/)=3.2.3 
+- [GDAL](https://gdal.org/)=3.4.1 
 - [Proj](https://proj.org/)=7.1.1
 - [OSGEO](https://www.osgeo.org/)=3.10.2
 
@@ -14,5 +14,5 @@ docker build .
 
 Docker compose
 ```yml
-FROM juanearthranger/python-gdal:1.0
+FROM juanearthranger/python-gdal:1.1
 ```
